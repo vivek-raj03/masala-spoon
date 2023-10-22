@@ -5,35 +5,28 @@
     margin: 0;
     padding: 0;
 }
+body{
+    overflow-x: hidden;
+}
 .big-container{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    /* justify-content: space-around; */
     margin-top: 50px;
     margin-left: 200px;
 }
 .content-hero{
     flex: 1;
     padding: 10px;
+    flex-wrap: wrap;
 }
 .vector-hero{
     flex: 1;
     padding: 10px;
+    flex-wrap: wrap;
 }
 .hero-image{
-    height: 400px;
-}
-.content-hero{
-    flex: 1;
-    padding: 10px;
-}
-.vector-hero{
-    flex: 1;
-    padding: 10px;
-}
-.hero-image{
-    height: 400px;
+    height: 600px;
 }
 .hero-title{
     font-family: 'Merriweather', serif;
