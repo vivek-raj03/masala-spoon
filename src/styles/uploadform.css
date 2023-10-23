@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&family=Titillium+Web:wght@300&family=Zilla+Slab:ital@1&display=swap');
+body {
+    background-color: #f4f4f4;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+.container {
+    max-width: 95vw;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-family: 'Zilla Slab', serif;
+  }
+  
+  /* Heading style */
+  h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333; 
+    text-align: center; 
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+    text-transform: uppercase; 
+    font-family: 'Zilla Slab', serif;
+  }
+  
+  /* Form groups */
+  .form-group {
+    margin: 20px 0;
+    text-align: left;
+  }
+  
+  /* Label style */
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+    font-family: 'Zilla Slab', serif;
+  }
+  input[type="text"],select{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    resize: vertical; /* Allows vertical resizing */
+    background-color: #f9f9f9;
+    transition: border-color 0.3s, background-color 0.3s; 
+  }
+  
+  /* Input style */
+
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    resize: vertical; /* Allows vertical resizing */
+    background-color: #f9f9f9;
+    transition: border-color 0.3s, background-color 0.3s; 
+  }
+  
+  /* Select style */
+  select {
+    height: 40px;
+  }
+  
+  /* Textarea style */
+  textarea {
+    height: 150px;
+  }
+  
+  /* Button style */
+  button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  .content-box:hover,
+.content-box:focus {
+  border: 1px solid #4caf50; /* Change border color on hover/focus */
+  background-color: #fff; /* Change background color on hover/focus */
+}
+
+/* Placeholder text style */
+.content-box::placeholder {
+  color: #999;
+}
+
+/* Textarea label style */
+.content-box + label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #555;
+}
+span{
+    margin-left: 8px;
+}
+.veg{
+    margin-left: 0px;
+    margin-right: 8px;
+}
+@media only screen and (max-width: 600px) {
+    .big-logo{
+        visibility: hidden;
+    }
+}
