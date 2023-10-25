@@ -13,7 +13,7 @@ function Uploadform() {
   const [formData, setFormData] = useState({
     authorName: '',
     dishName: '',
-    foodType: 'veg',
+    foodType: '',
     ingredients: '',
     cookingInstructions: '',
   });
