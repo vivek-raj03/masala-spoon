@@ -7,9 +7,13 @@ import {PiPlantDuotone} from "react-icons/pi"
 import {PiCookingPotFill} from "react-icons/pi"
 import {GiKnifeFork} from "react-icons/gi"
 import {PiCookingPotDuotone} from "react-icons/pi"
+import { recipies } from '../utils/data';
+import Display from './Display';
 
 
-function Uploadform() {
+export default function Uploadform() {
+  const [searchQuery, setSearchQuery] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
   const [formData, setFormData] = useState({
     authorName: '',
     dishName: '',
@@ -28,8 +32,26 @@ function Uploadform() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
+    const newData={
+      authorName: formData.authorName,
+      dishName: formData.dishName,
+      foodType: formData.foodType,
+      ingredients: formData.ingredients,
+      cookingInstructions: formData.cookingInstructions,
+    }
+    recipies.push(newData);
+    console.log(recipies);
+    console.log(newData);
   };
+  
+    const handleSearch = () => {
+      // Filter recipes based on the search query
+      const filteredRecipes = recipies.filter((recipe) =>
+        recipe.dishName.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+      setSearchResults(filteredRecipes);
+    };
+  
 
   return (
     <div className="container">
@@ -102,8 +124,16 @@ function Uploadform() {
 
         <button type="submit" onClick={showAlert}>Submit Recipe</button>
       </form>
+      <input
+        type="text"
+        placeholder="Search by Dish Name"
+        value={searchQuery}
+        onChange={(e) => setSearchQuery(e.target.value)}
+      />
+      <button onClick={handleSearch}>Search</button>
+      <Display searchResults={searchResults}/>
     </div>
   );
 }
 
-export default Uploadform;
+// export default Uploadform;

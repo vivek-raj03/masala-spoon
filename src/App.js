@@ -4,7 +4,6 @@ import Home from './pages/home';
 import About from './pages/About';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import Upload from './pages/Upload';
-import Display from './pages/Display';
 function App() {
   return (
    // <>
@@ -14,7 +13,6 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/upload" element={<Upload/>}/>
-          <Route path='/display' element={<Display/>}/>
       </Routes>
     </BrowserRouter>
     </div>
