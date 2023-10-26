@@ -53,6 +53,7 @@ body {
     background-color: #f9f9f9;
     transition: border-color 0.3s, background-color 0.3s; 
   }
+
   
   /* Input style */
 
@@ -79,7 +80,7 @@ body {
   }
   
   /* Button style */
-  button {
+  .sub-btn {
     background-color: #4caf50;
     color: #fff;
     border: none;
@@ -90,7 +91,22 @@ body {
     transition: background-color 0.3s;
   }
   
-  button:hover {
+  .sub-btn:hover {
+    background-color: #45a049;
+  }
+  .s-btn {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+  }
+  
+  .s-btn:hover {
     background-color: #45a049;
   }
   .content-box:hover,
@@ -116,6 +132,11 @@ span{
 .veg{
     margin-left: 0px;
     margin-right: 8px;
+}
+hr{
+  height: 20px;
+  background-color: #4caf50;
+  border: 1px solid black;
 }
 @media only screen and (max-width: 600px) {
     .big-logo{

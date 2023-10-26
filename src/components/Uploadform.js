@@ -54,8 +54,9 @@ export default function Uploadform() {
   
 
   return (
+    <>
     <div className="container">
-      <h2><span className='veg'><PiCookingPotDuotone/></span>Share Your Recipe<span className='big-logo'><PiCookingPotDuotone/></span></h2>
+      <h2 className><span className='veg'><PiCookingPotDuotone/></span>Share Your Recipe<span className='big-logo'><PiCookingPotDuotone/></span></h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="authorName">Author Name:<span><BsPersonFill/></span></label>
@@ -122,17 +123,22 @@ export default function Uploadform() {
           />
         </div>
 
-        <button type="submit" onClick={showAlert}>Submit Recipe</button>
+        <button className="sub-btn"type="submit" onClick={showAlert}>Submit Recipe</button>
       </form>
+      <hr></hr>
       <input
         type="text"
         placeholder="Search by Dish Name"
+        className='content-box'
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
       />
-      <button onClick={handleSearch}>Search</button>
-      <Display searchResults={searchResults}/>
+      <button  className="s-btn"onClick={handleSearch}>Search</button>
+    <Display searchResults={searchResults}/>
     </div>
+    
+   
+    </>
   );
 }
 
